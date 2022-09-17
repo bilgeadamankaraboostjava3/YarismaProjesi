@@ -44,7 +44,7 @@ html {
     border-radius: 5px;
     background: rgba(3,3,3,0.25);
     box-shadow: 1px 1px 50px #000;
-    display: none;
+
   }
   
   .close-btn{
@@ -209,4 +209,13 @@ html {
   
   .orange-btn{
     background: rgba(87,198,255,.5);
+  }
+
+  p{
+    text-align: center;
+  }
+  .error{
+    font-size: large;
+    color: red;
+    text-align: center;
   }

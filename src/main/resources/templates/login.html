@@ -9,14 +9,12 @@
 
 </head>
 <body>
-    <div id="login-button">
-    <img src="https://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png">
-    </img>
-  </div>
+
   <div id="container">
     <h1>Log In</h1>
     <span class="close-btn">
       <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
+
     </span>
   
     <form action="/login" method="post">
@@ -28,7 +26,8 @@
         <span id="remember">Remember me</span>
         <span id="forgotten">Forgotten password</span>
       </div>
-  </form>
+    </form>
+      <p><label th:text="${error}" class="error"/></p>
   </div>
   
   <!-- Forgotten Password Container -->

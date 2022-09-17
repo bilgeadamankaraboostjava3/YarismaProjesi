@@ -26,6 +26,11 @@ public class LoginController {
        return new ModelAndView("login");
     }
 
+    @GetMapping("/register")
+    public ModelAndView register(){
+        return new ModelAndView("register");
+    }
+
     @PostMapping("/login")
     public ModelAndView login(DoLoginDto doLoginDto){
        Optional<User> userOptional =  userService.doLogin(doLoginDto);
