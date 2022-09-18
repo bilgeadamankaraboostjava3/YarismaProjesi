@@ -5,53 +5,51 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register Page</title>
-  <link rel="stylesheet" href="/css/register.css.css">
-
+  <link rel="stylesheet" href="/css/register.css">
+  <script src="https://use.fontawesome.com/4ecc3dbb0b.js"></script>
 </head>
 
 <body ng-controller="RegisterCtrl" ng-app="myApp">
-<div class="container">
-  <div id="signup">
-    <div class="signup-screen">
-      <div class="space-bot text-center">
-        <h1>Sign up</h1>
-        <div class="divider"></div>
+<div class="form_wrapper">
+  <div class="form_container">
+    <div class="title_container">
+      <h2>Register Form</h2>
+    </div>
+    <div class="row clearfix">
+      <div class="">
+        <form method="post" action="register">
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <input type="text" name="username" placeholder="Kullanıcı adı" required />
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="password" name="password" placeholder="Password" required />
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="password" name="repassword" placeholder="Re-type Password" required />
+          </div>
+          <div class="row clearfix">
+            <div class="col">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="adsoyad" placeholder="Ad Soyad" />
+              </div>
+            </div>
+
+          </div>
+          <div class="input_field checkbox_option">
+            <input type="checkbox" id="cb1">
+            <label for="cb1">I agree with terms and conditions</label>
+          </div>
+          <div class="input_field checkbox_option">
+            <input type="checkbox" id="cb2">
+            <label for="cb2">I want to receive the newsletter</label>
+          </div>
+          <input class="button" type="submit" value="Register" />
+        </form>
       </div>
-      <form class="form-register" method="post" name="register" novalidate>
-        <div class="input-field col s6">
-          <input id="first-name" type="text" class="validate" required>
-          <label for="first-name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last-name" type="text" class="validate" required>
-          <label for="last-name">Last Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="email" type="email" name="email" ng-model="email" class="validate" required>
-          <label for="email">Email</label>
-        </div>
-        <p class="alert alert-danger" ng-show="form-register.email.$error.email">Your email is invalid.</p>
-        <div class="input-field col s6">
-          <input id="password" type="password" name="password" ng-model="password" ng-minlength='6' class="validate" required>
-          <label for="password">Password</label>
-        </div>
-        <p class="alert alert-danger" ng-show="form-register.password.$error.minlength || form.password.$invalid">Your password must be at least 6 characters.</p>
-        <div class="space-top text-center">
-          <button ng-disabled="form-register.$invalid" class="waves-effect waves-light btn done">
-            <i class="material-icons left">done</i> Done
-          </button>
-          <button type="button" class="waves-effect waves-light btn cancel">
-            <i class="material-icons left">clear</i>Cancel
-          </button>
-        </div>
-      </form>
     </div>
   </div>
 </div>
-<script src="/js/register.js"></script>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
 </body>
 
 </html>
