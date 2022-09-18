@@ -20,7 +20,7 @@ public class Sorular {
     Long id;
     @Column(length = 1000)
     String soru;
-    Long sure;
+    int sure;
     Long sahipuserid;
     int cevapadedi;
     String grupadi;
