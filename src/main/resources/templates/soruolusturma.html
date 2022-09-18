@@ -13,7 +13,10 @@
             <div class="col-2"></div>
             <div class="col-8">
                 <div class="row">
-                    <input type="text" id="txtuserid" hidden>
+                    <div hidden>
+                        <input type="text" id="txtuserid" th:text="${userid}" />
+                    </div>
+
                     <div class="col-8">
                             <div class="mb-3">
                                 <label class="form-label">Soru</label>
@@ -37,7 +40,7 @@
                             <div class="col-3">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="CheckedA">
-                                    <label class="form-check-label" for="flexCheckChecked">
+                                    <label class="form-check-label" >
                                       Doğru Cevap
                                     </label>
                                   </div>
@@ -55,7 +58,7 @@
                             <div class="col-3">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="CheckedB">
-                                    <label class="form-check-label" for="flexCheckChecked">
+                                    <label class="form-check-label" >
                                       Doğru Cevap
                                     </label>
                                   </div>
@@ -108,11 +111,11 @@
         }
         let createQuestionObject= {
             soru: {
-                soruicerigi: "",  
+                soruicerigi: "",
                 sure: 0,
                 olusturanid: 0,
                 cevapadedi: 0
-            },           
+            },
             cevaplar: [],           
           
         }
