@@ -21,6 +21,7 @@ public class SoruGrubu {
     Long id;
     String grupadi;
     @Enumerated(EnumType.STRING)
+    @Builder.Default
     State state = State.ONAYLANMIS;
     @Embedded
     TableAdd tableAdd;

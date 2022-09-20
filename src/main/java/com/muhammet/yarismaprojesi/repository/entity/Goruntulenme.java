@@ -22,6 +22,7 @@ public class Goruntulenme {
     Long soru_id;
     Long date;
     @Enumerated(EnumType.STRING)
+    @Builder.Default
     State state = State.ONAYLANMIS;
     @Embedded
     TableAdd tableAdd;

@@ -23,8 +23,10 @@ public class User {
     String username;
     String password;
     @Enumerated(EnumType.STRING)
+    @Builder.Default
     UserType userType = UserType.USER;
     @Enumerated(EnumType.STRING)
+    @Builder.Default
     State state = State.ONAYLANMIS;
     @Embedded
     TableAdd tableAdd;

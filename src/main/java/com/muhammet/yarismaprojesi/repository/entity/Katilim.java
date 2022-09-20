@@ -22,6 +22,7 @@ public class Katilim {
     Long yarisma_id;
     Long date;
     @Enumerated(EnumType.STRING)
+    @Builder.Default
     KatilimDurumu katilimDurumu = KatilimDurumu.ONAYLANMAMIS;
     @Embedded
     TableAdd tableAdd;

@@ -23,6 +23,7 @@ public class DereceYapanlar {
     int puan;
     int sirasi;
     @Enumerated(EnumType.STRING)
+    @Builder.Default
     State state = State.ONAYLANMIS;
     @Embedded
     TableAdd tableAdd;
